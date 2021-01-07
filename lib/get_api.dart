@@ -12,6 +12,7 @@ class GetAPI extends StatefulWidget {
   _GetAPIState createState() => _GetAPIState();
 }
 
+
 class _GetAPIState extends State<GetAPI> {
   var jsonData;
   Map<String, int> data = {};
@@ -35,7 +36,7 @@ class _GetAPIState extends State<GetAPI> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('GET Covid API'),
+        title: Text('Thai Covid19 Today'),
       ),
       body: Center(
         child: FutureBuilder(
@@ -45,7 +46,7 @@ class _GetAPIState extends State<GetAPI> {
               return new Container(
                 child: new Column(
                   children: <Widget>[
-                    Text('newConfirmed'),
+                    Text('NewConfirmed'),
                     Text('${data['newConfirmed']}'),
                     SizedBox(
                       width: 120,
@@ -72,7 +73,28 @@ class _GetAPIState extends State<GetAPI> {
                   ],
                 ),
               );
- 
+   body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+              child: Column(
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Center(
+                      child: Text(
+                      ),
+                    )
+                  )
+                  SizedBox(height: sizeBox),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(200.0),
+                    child: Image.asset(
+                      'assets/images/covid19.jpg',
+                      height: 180.0,
+                    ),
+                  );
             } else {
               return Center(
                 child: CircularProgressIndicator(),   
