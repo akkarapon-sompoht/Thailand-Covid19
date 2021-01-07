@@ -23,7 +23,7 @@ class _WelcomePageState extends State<WelcomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-                child: Text('Get Covid Stat via API'),
+                child: Text('Get Covid Stat via API By Amphorn'),
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => GetAPI()));
